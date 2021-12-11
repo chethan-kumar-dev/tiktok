@@ -1,0 +1,99 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.tiktok-container{
+   width: 100%;
+  
+}
+.tiktok{
+   max-width: 500px;
+   height: 100%;
+   position: relative;
+   margin: 0 auto;
+}
+.container{
+   height: 100%;
+   width: 100%;
+   overflow: scroll;
+   scroll-snap-type: y mandatory;
+   position: relative;
+}
+.container>div{
+   width: 100%;
+   height: 100%;
+   scroll-snap-align:center;
+   position: relative;
+   overflow: hidden;
+
+}
+.container::-webkit-scrollbar{
+   display: none;
+}
+.sidebar-container{
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   color: white;
+   top: 50%;
+   left: 85%;
+   gap: 30px;
+}
+.footer-container{
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+   top: 80%;
+   left: 8%;
+   color: white;
+}
+video{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+.music-player{
+   animation: rotate infinite linear 1s;
+}
+.like,.comment,.share{
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+   align-items: center;
+   cursor: pointer;
+}
+@keyframes rotate{
+   100%{
+      transform: rotate(360deg);
+   }
+}
+.sticky-footer{
+   height: 60px;
+   width: 100%;
+   background-color: black;
+   position: absolute;
+   z-index: 99;
+   top: 92%;
+}
+
+.footer-icons{
+   display: flex;
+   padding-top: 10px;
+   width: 100%;
+
+}
+.footer-icons>div{
+   flex: 1 90;
+   text-align: center;
+}
+.footer-icons>div p{
+   color: white;
+   font-size: 14px;
+}
+.footer-icons  div span{
+   color: white;
+   font-size: 30px;
+}
